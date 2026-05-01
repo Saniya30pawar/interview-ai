@@ -1,10 +1,13 @@
 const mongoose = require("mongoose");
 
 
-async function connectDB() {
+async function connectToDB() {
 
 try{
-    await  mongoose.connect(process.env.MONGO_URI)
+    await  mongoose.connect(
+
+      "mongodb://localhost:27017/interview-master"
+    )
 
   console.log("Connected to Database")
 
@@ -15,4 +18,4 @@ catch(err){
 }
 
 
-module.exports = connectDB;
+module.exports = connectToDB;
