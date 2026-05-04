@@ -24,6 +24,10 @@ async function registerUserController(req, res) {
   return res.json({ success: true });
 }
 
+async function checklogin(req, res) {
+  return { success: true };
+}
 module.exports = {
   registerUserController,
+  checklogin,
 };
